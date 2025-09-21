@@ -1,25 +1,15 @@
-    let btn = document.querySelector("button");
-    let coin = document.querySelector(".game");
-    let result = document.querySelector(".result");
+let icon = document.querySelector(".icon");
+let ul = document.querySelector("ul");
 
-    btn.addEventListener("click", () => {
-    let i = Math.floor(Math.random() * 2);
-    coin.style.animation = "none";
-    if (i) {
-        setTimeout(() => {
-        coin.style.animation = "spin-head 2s forwards";
-        }, 100);
+icon.addEventListener("click", function () {
+  ul.style.display = "block";
+  ul.style.backgroundColor = "#eee";
+});
 
-        setTimeout(() => {
-        result.innerHTML = "tails";
-        }, 1900);
-    } else {
-        setTimeout(() => {
-        coin.style.animation = "spin-tail 2s forwards";
-        }, 100);
+document.body.addEventListener("click", function (e) {
+  if (!icon.contains(e.target) && !ul.contains(e.target)) {
+    ul.style.display = "none";
+  }
+});
 
-        setTimeout(() => {
-        result.innerHTML = "heads";
-        }, 1900);
-    }
-    });
+
