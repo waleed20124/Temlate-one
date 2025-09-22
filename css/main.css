@@ -116,7 +116,7 @@ li a:hover {
 /* Start Landing Page */
 
 .landing {
-  background-image: url(img/wallhaven-5g1ep5.jpg);
+  background-image: url(..img/wallhaven-5g1ep5.jpg);
   background-size: cover;
   height: calc(100vh - 64px);
 }
